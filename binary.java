@@ -94,3 +94,8 @@
       		
       }
    }
+
+
+/*
+What is the largest binary number you can input into the program? The biggest number I decided to put is 101001
+What is its decimal value? Its decimal value is 41.
