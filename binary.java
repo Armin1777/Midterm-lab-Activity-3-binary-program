@@ -1,6 +1,5 @@
 # Midterm-lab-Activity-3-binary-program
-
-/******************************************************************
+}/******************************************************************
  * Program 1: Conversion from binary to decimal representation
  * Programmer: Armenius II Mesa Dolores
  * 
@@ -17,35 +16,34 @@
  *
  ******************************************************************/
 
-// Imported packages
-   import javax.swing.*;
+package javaapplication2;
 
-    public class Binary
-   {
-   
-   // Main method
-       public static void main(String[] args)
-      {
-      	
-      	// Request 6-bit binary number
-         String binaryString=JOptionPane.showInputDialog("Enter a 6-bit binary number");
-      	
-      	// Convert from String to integer type
-         int binary=Integer.parseInt(binaryString);
-      	
-      	// Declaration of output value
-         int decimal=0;
-      
-      	// Declaration of variable to hold the current bit
-         int bit;
-      
-      	
-       	//////////////////////////////////////
-      	// ADD YOUR CODE HERE
-      	// FOLLOW THE EXAMPLE PROVIDED
-      	// FOR THE LAST BIT, THE 6th
-      	//////////////////////////////////////
-/*      				
+/**
+ *
+ * @author ARMENIUSII DOLORES
+ */
+import javax.swing.*;
+public class JavaApplication2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String binaryString=JOptionPane.showInputDialog("Enter a 6-bit binary number");
+        int binary=Integer.parseInt(binaryString);
+          int decimal=0;
+          int bit;
+          
+        int i=0;
+	int power2=1;
+	int len=binaryString.length();
+	while (i<len) {
+		bit=binary%10;//get the last bit (6th)
+		decimal=decimal+bit*power2;//add it, multiplied by the corresponding power of 2
+		binary=binary/10;//get rid of the 6th bit, now the 5th bit is last
+		power2*=2;
+		i++;
+                
          bit=binary%10;//get the last bit (6th)
          decimal=decimal+bit*1;//add it, multiplied by the corresponding power of 2
          binary=binary/10;//get rid of the 6th bit, now the 5th bit is last
@@ -68,32 +66,17 @@
       	
          bit=binary%10;//get the last bit (1st)
          decimal=decimal+bit*32;//add it, multiplied by the corresponding power of 2
-*/
-
-	int i=0;
-	int power2=1;
-	int len=binaryString.length();
-	while (i<len) {
-		bit=binary%10;//get the last bit (6th)
-		decimal=decimal+bit*power2;//add it, multiplied by the corresponding power of 2
-		binary=binary/10;//get rid of the 6th bit, now the 5th bit is last
-		power2*=2;
-		i++;
-	}
-
-      	// Format output String
+                
          String binaryOutput="Binary: " + binaryString;
          String decimalOutput="Decimal: " + (decimal*2-1);
-      	
-      	// Output message
-         JOptionPane.showMessageDialog(null, binaryOutput + "\n" + decimalOutput,
+         
+          JOptionPane.showMessageDialog(null, binaryOutput + "\n" + decimalOutput,
             "Binary to Decimal Conversion", JOptionPane.INFORMATION_MESSAGE);
-      		
-      	// Exit
-         System.exit(0);
-      		
-      }
-   }
+         
+          System.exit(0);
+         
+    }
+   
 
 
 /*
