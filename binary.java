@@ -1,7 +1,7 @@
 # Midterm-lab-Activity-3-binary-program
 }/******************************************************************
  * Program 1: Conversion from binary to decimal representation
- * Programmer: Armenius II Mesa Dolores
+ * Programmer: Armenius II Mesa Dolores, Blessie Tuscano, John Mark Gracela, Angelyn Gigantoca, Rodnel Gupit
  * 
  * Class: IT 121        Instructor: 
  *        
